@@ -1,0 +1,21 @@
+# Task 1: Code Completion Analysis
+
+## Comparison: Manual vs GitHub Copilot
+
+**Efficiency Winner: GitHub Copilot's Implementation**
+
+While both implementations achieve the core sorting functionality with identical time complexity (O(n log n)), GitHub Copilot's version demonstrates superior **production readiness** and **robustness**.
+
+**Key Advantages:**
+
+1. **Enhanced Functionality**: Copilot added a `reverse` parameter, providing bidirectional sorting without additional code.
+
+2. **Superior Edge Case Handling**: When encountering missing keys, the manual version defaults to `0`, which can cause incorrect sorting (e.g., placing missing values in the middle). Copilot uses `float('-inf')`, ensuring missing values consistently appear first, maintaining logical sort order.
+
+3. **Error Resilience**: Copilot included try-catch error handling for TypeError and AttributeError, preventing crashes from malformed data—critical for production environments.
+
+4. **Better Documentation**: Comprehensive docstrings with parameter descriptions improve code maintainability.
+
+5. **Performance**: Both executed in nearly identical time (~0.003s for 10,000 items), confirming the additional features add negligible overhead.
+
+**Conclusion**: Copilot's implementation is more efficient not due to speed, but through **reduced debugging time**, **fewer edge-case bugs**, and **improved flexibility**. This demonstrates AI code completion's value in producing enterprise-grade code instantly, saving developers hours of refinement work.
